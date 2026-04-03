@@ -21,7 +21,25 @@
     <h1>I Love You So Much ❤️🥰</h1>
 </div>
 
-<script src="script.js"></script>
+<script src="script.js"> 
+let noBtn = document.getElementById("noBtn");
+let yesBtn = document.getElementById("yesBtn");
+let popup = document.getElementById("popup");
+
+// Move NO button randomly
+noBtn.addEventListener("mouseover", function () {
+    let x = Math.random() * (window.innerWidth - 100);
+    let y = Math.random() * (window.innerHeight - 100);
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+});
+
+// Show love message
+yesBtn.addEventListener("click", function () {
+    popup.style.visibility = "visible";
+});
+</script>
 
 </body>
 </html>
